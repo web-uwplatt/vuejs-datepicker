@@ -399,7 +399,7 @@ export default {
       }
       this.currDate = month.timestamp
       this.showDayCalendar()
-      this.$emit('changedMonth', month)
+      this.$emit('changedmonth', month)
     },
 
     /**
@@ -411,7 +411,7 @@ export default {
       }
       this.currDate = year.timestamp
       this.showMonthCalendar()
-      this.$emit('changedYear', year)
+      this.$emit('changedyear', year)
     },
 
     /**
@@ -446,7 +446,7 @@ export default {
       let d = new Date(this.currDate)
       d.setMonth(d.getMonth() - 1)
       this.currDate = d.getTime()
-      this.$emit('changedMonth', d)
+      this.$emit('changedmonth', d)
     },
 
     previousMonthDisabled () {
@@ -471,7 +471,7 @@ export default {
       const daysInMonth = DateUtils.daysInMonth(d.getFullYear(), d.getMonth())
       d.setDate(d.getDate() + daysInMonth)
       this.currDate = d.getTime()
-      this.$emit('changedMonth', d)
+      this.$emit('changedmonth', d)
     },
 
     nextMonthDisabled () {
@@ -495,7 +495,7 @@ export default {
       let d = new Date(this.currDate)
       d.setYear(d.getFullYear() - 1)
       this.currDate = d.getTime()
-      this.$emit('changedYear')
+      this.$emit('changedyear')
     },
 
     previousYearDisabled () {
@@ -516,7 +516,7 @@ export default {
       let d = new Date(this.currDate)
       d.setYear(d.getFullYear() + 1)
       this.currDate = d.getTime()
-      this.$emit('changedYear')
+      this.$emit('changedyear')
     },
 
     nextYearDisabled () {
@@ -537,7 +537,7 @@ export default {
       let d = new Date(this.currDate)
       d.setYear(d.getFullYear() - 10)
       this.currDate = d.getTime()
-      this.$emit('changedDecade')
+      this.$emit('changeddecade')
     },
 
     previousDecadeDisabled () {
@@ -558,7 +558,7 @@ export default {
       let d = new Date(this.currDate)
       d.setYear(d.getFullYear() + 10)
       this.currDate = d.getTime()
-      this.$emit('changedDecade')
+      this.$emit('changeddecade')
     },
 
     nextDecadeDisabled () {
