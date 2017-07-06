@@ -99,9 +99,9 @@ These events are emitted on actions in the datepicker
 | selectedDisabled  | Object     | A disabled date has been selected    |
 | input             | Date\|null | Input value has been modified        |
 | cleared           |            | Selected date has been cleared       |
-| changedMonth      | Object     | Month page has been changed          |
-| changedYear       | Object     | Year page has been changed           |
-| changedDecade     | Object     | Decade page has been changed         |
+| changedmonth      | Object     | Month page has been changed          |
+| changedyear       | Object     | Year page has been changed           |
+| changeddecade     | Object     | Decade page has been changed         |
 
 
 ## Date formatting

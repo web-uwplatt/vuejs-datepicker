@@ -395,7 +395,7 @@ export default {
       const date = new Date(month.timestamp)
       this.setPageDate(date)
       this.showDayCalendar()
-      this.$emit('changedMonth', month)
+      this.$emit('changedmonth', month)
     },
     /**
      * @param {Object} year
@@ -407,7 +407,7 @@ export default {
       const date = new Date(year.timestamp)
       this.setPageDate(date)
       this.showMonthCalendar()
-      this.$emit('changedYear', year)
+      this.$emit('changedyear', year)
     },
     /**
      * @return {Number}
@@ -438,7 +438,7 @@ export default {
       let date = this.pageDate
       date.setMonth(date.getMonth() + incrementBy)
       this.setPageDate(date)
-      this.$emit('changedMonth', date)
+      this.$emit('changedmonth', date)
     },
     previousMonth () {
       if (!this.previousMonthDisabled()) {
@@ -466,7 +466,7 @@ export default {
       return this.disabled.from.getMonth() <= d.getMonth() &&
         this.disabled.from.getFullYear() <= d.getFullYear()
     },
-    changeYear (incrementBy, emit = 'changedYear') {
+    changeYear (incrementBy, emit = 'changedyear') {
       let date = this.pageDate
       date.setYear(date.getFullYear() + incrementBy)
       this.setPageDate(date)
@@ -496,7 +496,7 @@ export default {
     },
     previousDecade () {
       if (!this.previousDecadeDisabled()) {
-        this.changeYear(-10, 'changeDecade')
+        this.changeYear(-10, 'changedecade')
       }
     },
     previousDecadeDisabled () {
@@ -507,7 +507,7 @@ export default {
     },
     nextDecade () {
       if (!this.nextDecadeDisabled()) {
-        this.changeYear(10, 'changeDecade')
+        this.changeYear(10, 'changedecade')
       }
     },
     nextDecadeDisabled () {
